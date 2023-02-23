@@ -8,6 +8,12 @@ import feign.gson.GsonDecoder;
 import com.google.gson.GsonBuilder;
 import com.google.gson.FieldNamingPolicy;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+public String toString() {
+        return ReflectionToStringBuilder.toString(this, ToStringStyle.MULTI_LINE_STYLE);
+        }
 public interface GeoLocator {
 
     @RequestLine("GET")
